@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<title>城外</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- ファビコンの設定-->
+<link rel="shortcut icon" href="./images/favicon.ico">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href2="./images/android-chrome-256x256.png">
+</head>
+
+<body class="outside">
+
+  <!-- ローディング画面 -->
+<div class="loader">
+  <img src="images/loading2.gif" alt="ローディング">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./js/load2.js"></script>
+
+
+<header>
+  <a href="index.html">
+    <img class="title-logo" src="images/genshin_logo.webp" alt="原神logo">
+  </a>
+  
+  <div class="nav">
+    
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+
+    <!-- メニュー -->
+    <nav class="nav_content">
+      <h4>トップページ</h4>
+      <ul class="nav_list1">
+        <li class="nav_item"><a href="index.html">モンド</a></li>
+      </ul>
+      <h4>&thinsp;組織一覧</h4>
+      <ul class="nav_list2">
+        <li class="nav_item"><a href="1_knights.html">西風騎士団</a></li>
+        <li class="nav_item"><a href="2_church.html">西風教会</a></li>
+        <li class="nav_item"><a href="3_castle.html">モンド城</a></li>
+        <li class="nav_item"><a href="4_outside.html">城外</a></li>
+        <li class="nav_item"><a href="5_adventurer.html">冒険者協会</a></li>
+      </ul>
+    </nav> 
+  </div>
+</header>
+  
+  
+<div class="wrapper">
+<div class="explain">
+  <img class="outside-logo" src="images/outside_logo.png" alt="城外">
+  <div class="explain-text">
+    <h1>城外</h1>
+    <p>
+      モンドの地形はなだらかであり平地と丘陵、森林からなる。<br>
+       伝説では、バルバドスが風で氷雪を払い、台地を平坦にした、と伝えられる。
+    </p>
+  </div>
+</div>
+
+<!-- <div class="status-wrapper">
+  <h4>ステータス</h4>
+  <div class="status-list">
+    <section class="status">
+      <h5>名称</h5>
+      <ruby>
+        <p>西風騎士団</p>
+        <rt class="sepu">セピュロス&emsp;&emsp;&emsp;&emsp;&nbsp;</rt>
+      </ruby>
+    </section>
+    <section class="status">
+      <h5>種類</h5>
+      <p>騎士団</p>
+    </section>
+    <section class="status">
+      <h5>国</h5>
+      <p>モンド</p>
+    </section>
+    <section class="status">
+      <h5>代表者</h5>
+      <p>ジン(代理団長)</p>
+    </section>
+  </div>
+</div> -->
+
+<div class="summary">
+  <h4>概要</h4>
+  <p>
+    モンドは「星落ちの谷」、「風唸りの丘」、「蒼風の高地」、「明冠山地」、「ドラゴンスパイン」の５つの地区からなる。モンドの中央、シードル湖に浮かぶモンド城はモンドの中心都市である。北西の「風魔廃墟」は旧モンドと呼ばれ、約2600年前のモンドの首都であった。<br>
+
+    中東部に位置する「風立ちの丘」に生えているオークの大木は、初代西風騎士団長・ヴァネッサが天空へと旅立った地とされる。<br>
+
+    奔狼領は、かつて風神の座を巡ってバルバドスと争い、敗れたボレアス（風神アンドリアス）が住み着く地とされる。<br>
+
+    南部のドラゴンスパインは、天より落とされた「寒天の釘」により氷雪に覆われ、プレイヤーは寒冷状態に陥いる。<br>
+  </p>
+</div>
+
+<div class="member-wrapper">
+  <h4>所属キャラ</h4>
+  <div class="member-list">
+    <!-- 左側 キャラリスト -->
+    <div class="char-list">
+      <button class="char-btn" data-target="Diluc" data-detail="Diluc-detail">
+        <img src="images/icon_Diluc.webp" alt="ディルック">
+        <p>ディルック</p>
+      </button>
+      <button class="char-btn" data-target="Razor" data-detail="Razor-detail">
+        <img src="images/icon_Razor.webp" alt="レザー">
+        <p>レザー</p>
+      </button>
+    </div>
+
+    <!-- 右側 キャラ詳細 -->
+    <div class="char-display">
+      <div id="Diluc" class="char-content active" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ディルック</h2>
+            <p>モンドの大半の酒造を掌握する貴公子。<br>
+              財力も人望も実力も、見くびってはならない。
+            </p>
+          </div>              
+          <img src="images/avatar_Diluc.webp" alt="ディルック">
+        </div>
+      </div>
+      <div id="Razor" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>レザー</h2>
+            <p>人間の町から離れた、モンド地域の奔狼領で狼と暮らす少年。勘が鋭く、動きが俊敏。
+            </p>
+          </div>              
+          <img src="images/avatar_Razor.webp" alt="レザー">
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="char-status">
+    <h4>詳細ステータス</h4>
+    <div id="Diluc-detail" class="char-detail">
+      <div id="Diluc" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ディルック / Diluc</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>4月30日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>夜梟座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>アカツキの裏面</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>炎</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>アカツキワイナリー</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>小野賢章</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Razor-detail" class="char-detail">
+      <div id="Razor" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>レザー / Razor</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>9月9日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>狼座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>狼少年</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>雷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>奔狼領</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>内山昂輝</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+<footer>
+  <p><small>Copyright 2025 genshin unofficial web site</small></p>
+  
+  <a class="pagetop" href="1_knights.html"><div class="page__top"></div></a>
+</footer>
+
+<script src="./js/chara-view.js"></script>
+</body>
+</html>

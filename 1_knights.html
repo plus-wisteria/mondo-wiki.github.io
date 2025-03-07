@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<title>西風騎士団</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!--ファビコンの設定-->
+<link rel="shortcut icon" href="./images/favicon.ico">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href2="./images/android-chrome-256x256.png">
+</head>
+
+<body class="knight">
+
+  <!-- ローディング画面 -->
+<div class="loader">
+  <img src="images/loading2.gif" alt="ローディング">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./js/load2.js"></script>
+
+
+<header>
+  <a href="index.html">
+    <img class="title-logo" src="images/genshin_logo.webp" alt="原神logo">
+  </a>
+  
+  <div class="nav">
+    
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+
+    <!-- メニュー -->
+    <nav class="nav_content">
+      <h4>トップページ</h4>
+      <ul class="nav_list1">
+        <li class="nav_item"><a href="index.html">モンド</a></li>
+      </ul>
+      <h4>&thinsp;組織一覧</h4>
+      <ul class="nav_list2">
+        <li class="nav_item"><a href="1_knights.html">西風騎士団</a></li>
+        <li class="nav_item"><a href="2_church.html">西風教会</a></li>
+        <li class="nav_item"><a href="2_church.html">モンド城</a></li>
+        <li class="nav_item"><a href="2_church.html">城外</a></li>
+        <li class="nav_item"><a href="2_church.html">冒険者協会</a></li>
+      </ul>
+    </nav> 
+  </div>
+</header>
+  
+  
+<div class="wrapper">
+<div class="explain">
+  <img class="knight-logo" src="images/Knights_logo.webp" alt="西風騎士団">
+  <div class="explain-text">
+    <h1>西風騎士団</h1>
+    <p>
+      モンドの秩序とモンドの「自由」を守る組織。<br>
+      騎士だと言われているが、誰かに命じられたわけではない——高い責任を背負っている西風騎士団は自慢できる肩書きである。
+    </p>
+  </div>
+</div>
+
+<div class="status-wrapper">
+  <h4>ステータス</h4>
+  <div class="status-list">
+    <section class="status">
+      <h5>名称</h5>
+      <ruby>
+        <p>西風騎士団</p>
+        <rt class="sepu">セピュロス&emsp;&emsp;&emsp;&emsp;&nbsp;</rt>
+      </ruby>
+    </section>
+    <section class="status">
+      <h5>本拠地</h5>
+      <p>西風騎士団本部</p>
+    </section>
+    <section class="status">
+      <h5>国</h5>
+      <p>モンド</p>
+    </section>
+    <section class="status">
+      <h5>代表者</h5>
+      <p>ジン(代理団長)</p>
+    </section>
+  </div>
+</div>
+
+<div class="summary">
+  <h4>概要</h4>
+  <p>
+    西風騎士団はモンドを守る防衛組織であり、過去の歴史故に王や貴族などの特権階級を持つ事をしないモンドの事実上の統治機構でもある。<br>
+    ゲーム内時空では、半年前に大団長ファルカが5分の4の騎士を連れて北境への遠征に出発した。現在は副団長ジンが代理団長として政務を担当しているが、深刻な人手不足の状態にある。<br>
+    <small>
+      大団長のファルカは様々なテキストやボイスに登場する重要な人物だが、現在も未登場のため容姿などは不明。
+    </small>
+  </p>
+</div>
+
+<div class="member-wrapper">
+  <h4>所属キャラ</h4>
+  <div class="member-list">
+    <!-- 左側 キャラリスト -->
+    <div class="char-list">
+      <button class="char-btn" data-target="Jean" data-detail="Jean-detail">
+        <img src="images/icon_Jean.webp" alt="ジン">
+        <p>ジン</p>
+      </button>
+      <button class="char-btn" data-target="Kaeya" data-detail="Kaeya-detail">
+        <img src="images/icon_Kaeya.webp" alt="ガイア">
+        <p>ガイア</p>
+      </button>
+      <button class="char-btn" data-target="Eula" data-detail="Eula-detail">
+        <img src="images/icon_Eula.webp" alt="エウルア">
+        <p>エウルア</p>
+      </button>
+      <button class="char-btn" data-target="Albedo" data-detail="Albedo-detail">
+        <img src="images/icon_Albedo.webp" alt="アルベド">
+        <p>アルベド</p>
+      </button>
+      <button class="char-btn" data-target="Amber" data-detail="Amber-detail">
+        <img src="images/icon_Amber.webp" alt="アンバー">
+        <p>アンバー</p>
+      </button>
+      <button class="char-btn" data-target="Mika" data-detail="Mika-detail">
+        <img src="images/icon_Mika.webp" alt="ミカ">
+        <p>ミカ</p>
+      </button>
+      <button class="char-btn" data-target="Sucrose" data-detail="Sucrose-detail">
+        <img src="images/icon_Sucrose.webp" alt="スクロース">
+        <p>スクロース</p>
+      </button>
+      <button class="char-btn" data-target="Klee" data-detail="Klee-detail">
+        <img src="images/icon_Klee.webp" alt="クレー">
+        <p>クレー</p>
+      </button>
+      <button class="char-btn" data-target="Noelle" data-detail="Noelle-detail">
+        <img src="images/icon_Noelle.webp" alt="ノエル">
+        <p>ノエル</p>
+      </button>
+      <button class="char-btn" data-target="Lisa" data-detail="Lisa-detail">
+        <img src="images/icon_Lisa.webp" alt="リサ">
+        <p>リサ</p>
+      </button>
+      <button class="char-btn" data-target="Traveler" data-detail="Traveler-detail">
+        <img src="images/icon_Traveler.webp" alt="旅人（風）">
+        <p>旅人（風）</p>
+      </button>
+    </div>
+
+    <!-- 右側 キャラ詳細 -->
+    <div class="char-display">
+      <div id="Jean" class="char-content active" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ジン</h2>
+            <p>正直で真面目な蒲公英騎士。<br>
+              大団長が不在の間は代理団長を務める。
+            </p>
+          </div>              
+          <img src="images/avatar_Jean.webp" alt="ジン">
+        </div>
+      </div>
+      <div id="Kaeya" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ガイア</h2>
+            <p>異国の顔を持つ剣士。騎兵隊隊長。<br>
+              西風騎士団の頭脳派である。<br><br>
+
+              現在、騎兵隊員は全員大団長の遠征に同行している。
+            </p>
+          </div>              
+          <img src="images/avatar_Kaeya.webp" alt="ガイア">
+        </div>
+      </div>
+      <div id="Eula" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>エウルア</h2>
+            <p>古き一族出身の「波花騎士」。<br>
+              西風騎士団の遊撃小隊隊長である。<br>
+              旧貴族の末裔でありながら、敵対関係に
+              ある西風騎士団に入団した理由は、
+              未だ謎に包まれている。
+            </p>
+          </div>              
+          <img src="images/avatar_Eula.webp" alt="エウルア">
+        </div>
+      </div>
+      <div id="Albedo" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>アルベド</h2>
+            <p>西風騎士団の首席錬金術師兼調査小隊隊長。<br>
+              「白亜の申し子」と呼ばれる天才。
+            </p>
+          </div>              
+          <img src="images/avatar_Albedo.webp" alt="アルベド">
+        </div>
+      </div>
+      <div id="Amber" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2> アンバー</h2>
+            <p>元気満々な女の子、騎士団で最も優秀で、
+              最後の偵察騎士である。
+            </p>
+          </div>              
+          <img src="images/avatar_Amber.webp" alt="アンバー">
+        </div>
+      </div>
+      <div id="Mika" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ミカ</h2>
+            <p>平凡な家庭に生まれた若い騎士。小隊では「前進測量士」を担当している。控えめで慎重な性格の持ち主。
+            </p>
+          </div>              
+          <img src="images/avatar_Mika.webp" alt="ミカ">
+        </div>
+      </div>
+      <div id="Sucrose" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>スクロース</h2>
+            <p>この世界のありとあらゆるものに強い好奇心を抱く錬金術師。<br>
+              研究分野は「生物錬金」。
+            </p>
+          </div>              
+          <img src="images/avatar_Sucrose.webp" alt="スクロース">
+        </div>
+      </div>
+      <div id="Klee" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>クレー</h2>
+            <p>西風騎士団反省室の常連で、モンドの爆破スペシャリスト。<br>
+              人呼んで「逃げ回る太陽」。
+            </p>
+          </div>              
+          <img src="images/avatar_Klee.webp" alt="クレー">
+        </div>
+      </div>
+      <div id="Noelle" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ノエル</h2>
+            <p>「西風騎士団」の頼もしいメイド。<br>
+              いつか本当の騎士になることを夢見ている。
+            </p>
+          </div>              
+          <img src="images/avatar_Noelle.webp" alt="ノエル">
+        </div>
+      </div>
+      <div id="Lisa" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>リサ</h2>
+            <p>無気力だが博学な図書館司書。<br>
+              スメール教令院「200年に1人」の天才卒業生。
+            </p>
+          </div>              
+          <img src="images/avatar_Lisa.webp" alt="リサ">
+        </div>
+      </div>
+      <div id="Traveler" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>旅人</h2>
+            <p>世界の外から漂流してきた旅人。<br>
+              肉親が見知らぬ神に連れ去られたため、七神を探す旅に出た。<br><br>
+
+              メインストーリーでの活躍により、西風騎士団から栄誉騎士の称号を授与されることになる。
+            </p>
+          </div>              
+          <img src="images/avatar_Traveler.webp" alt="旅人">
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="char-status">
+    <h4>詳細ステータス</h4>
+    <div id="Jean-detail" class="char-detail">
+      <div id="Jean" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ジン / Jean</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>3月14日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>仔獅子座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>蒲公英騎士</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>風</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>斎藤千和</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Kaeya-detail" class="char-detail">
+      <div id="Kaeya" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ガイア / Kaeya</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>11月30日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>孔雀羽座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>寒風の剣士</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>氷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>鳥海浩輔</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Eula-detail" class="char-detail">
+      <div id="Eula" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>エウルア / Eula</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>10月25日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>波沫座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>波沫のワルツ</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>氷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>佐藤利奈</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.5</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Albedo-detail" class="char-detail">
+      <div id="Albedo" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>アルベド / Albedo</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>9月13日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>白亜の申し子座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>白亜の申し子</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>岩</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>野島健児</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.2</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Amber-detail" class="char-detail">
+      <div id="Amber" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>アンバー / Amber</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>8月10日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>小兎座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>飛行チャンピオン</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>岩</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>石見舞菜香</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Mika-detail" class="char-detail">
+      <div id="Mika" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ミカ / Mika</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>8月11日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>森鳩座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>霜晴の測量</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>氷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>三瓶由布子</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>3.5</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Sucrose-detail" class="char-detail">
+      <div id="Sucrose" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>スクロース / Sucrose</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>11月26日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>小兎座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>無害の甘味</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>風 </p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>藤田茜</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Klee-detail" class="char-detail">
+      <div id="Klee" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>クレー / Klee</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>7月27日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>四つ葉座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>逃げ回る太陽</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>炎</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>久野美咲</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Noelle-detail" class="char-detail">
+      <div id="Noelle" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ノエル / Noelle</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>3月21日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>心護座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>騎士道の花咲</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>岩</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>高尾奏音</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Lisa-detail" class="char-detail">
+      <div id="Lisa" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>リサ / Lisa</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>6月9日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>砂時計座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>薔薇の魔女</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>雷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風騎士団</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>田中理恵</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Traveler-detail" class="char-detail">
+      <div id="Traveler" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>旅人 / Traveler</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p> - </p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>旅人座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>運命を超える星</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>無</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p> - </p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>堀江瞬&悠木碧</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+</div>
+
+<footer>
+  <p><small>Copyright 2025 genshin unofficial web site</small></p>
+  
+  <a class="pagetop" href="1_knights.html"><div class="page__top"></div></a>
+</footer>
+
+<script src="./js/chara-view.js"></script>
+</body>
+</html>

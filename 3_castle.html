@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<title>モンド城</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!--ファビコンの設定-->
+<link rel="shortcut icon" href="./images/favicon.ico">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href2="./images/android-chrome-256x256.png">
+</head>
+
+<body class="castle">
+
+  <!-- ローディング画面 -->
+<div class="loader">
+  <img src="images/loading2.gif" alt="ローディング">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./js/load2.js"></script>
+
+
+<header>
+  <a href="index.html">
+    <img class="title-logo" src="images/genshin_logo.webp" alt="原神logo">
+  </a>
+  
+  <div class="nav">
+    
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+
+    <!-- メニュー -->
+    <nav class="nav_content">
+      <h4>トップページ</h4>
+      <ul class="nav_list1">
+        <li class="nav_item"><a href="index.html">モンド</a></li>
+      </ul>
+      <h4>&thinsp;組織一覧</h4>
+      <ul class="nav_list2">
+        <li class="nav_item"><a href="1_knights.html">西風騎士団</a></li>
+        <li class="nav_item"><a href="2_church.html">西風教会</a></li>
+        <li class="nav_item"><a href="3_castle.html">モンド城</a></li>
+        <li class="nav_item"><a href="4_outside.html">城外</a></li>
+        <li class="nav_item"><a href="5_adventurer.html">冒険者協会</a></li>
+      </ul>
+    </nav> 
+  </div>
+</header>
+  
+  
+<div class="wrapper">
+<div class="explain">
+  <img class="castle-logo" src="images/castle_logo.png" alt="モンド城">
+  <div class="explain-text">
+    <h1>モンド城</h1>
+    <p>
+      モンドの中心都市。
+      シードル湖に浮かぶ大きな島に位置するモンドシュタットは、石畳の道といくつかの風車があり、東の下端には大きな石の城壁に囲まれている。 風神の像が街を見守り、その奥には西風大聖堂がある
+    </p>
+  </div>
+</div>
+
+<div class="status-wrapper">
+  <h4>ステータス</h4>
+  <div class="status-list">
+    <section class="status">
+      <h5>名称</h5>
+      <ruby>
+        <p>モンド城</p>
+      </ruby>
+    </section>
+    <section class="status">
+      <h5>本拠地</h5>
+      <p>モンド城</p>
+    </section>
+    <section class="status">
+      <h5>国</h5>
+      <p>モンド</p>
+    </section>
+    <section class="status">
+      <h5>代表者</h5>
+      <p>西風騎士団</p>
+    </section>
+  </div>
+</div>
+
+
+<div class="member-wrapper">
+  <h4>所属キャラ</h4>
+  <div class="member-list">
+    <!-- 左側 キャラリスト -->
+    <div class="char-list">
+      <button class="char-btn" data-target="Venti" data-detail="Venti-detail">
+        <img src="images/icon_Venti.webp" alt="ウェンティ">
+        <p>ウェンティ</p>
+      </button>
+      <button class="char-btn" data-target="Mona" data-detail="Mona-detail">
+        <img src="images/icon_Mona.webp" alt="モナ">
+        <p>モナ</p>
+      </button>
+      <button class="char-btn" data-target="Diona" data-detail="Diona-detail">
+        <img src="images/icon_Diona.webp" alt="ディオナ">
+        <p>ディオナ</p>
+      </button>
+    </div>
+
+    <!-- 右側 キャラ詳細 -->
+    <div class="char-display">
+      <div id="Venti" class="char-content active" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ウェンティ</h2>
+            <p>モンドの街にいる、数多くの自由な吟遊詩人の一人。
+            </p>
+          </div>              
+          <img src="images/avatar_Venti.webp" alt="ウェンティ">
+        </div>
+      </div>
+      <div id="Mona" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>モナ</h2>
+            <p>謎の占星術師の少女。<br>
+              自分のことを「偉大なる占星術師モナ」と自称するが、その肩書きに相応しい実力を持っている。<br>
+              博学で、高慢。
+            </p>
+          </div>              
+          <img src="images/avatar_Mona.webp" alt="モナ">
+        </div>
+      </div>
+      <div id="Diona" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ディオナ</h2>
+            <p>稀な「非人類」の血統を引いている少女、<br>
+              「キャッツテール」の超人気バーテンダー。
+            </p>
+          </div>              
+          <img src="images/avatar_Diona.webp" alt="ディオナ">
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="char-status">
+    <h4>詳細ステータス</h4>
+    <div id="Venti-detail" class="char-detail">
+      <div id="Venti" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ウェンティ / Venti</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>6月16日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>歌仙座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>風色の詩人</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>風</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>モンド城</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>村瀬歩</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Mona-detail" class="char-detail">
+      <div id="Mona" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>モナ / Mona</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>8月31日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>映天座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>星天水鏡</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>水</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>モンド城</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>小原好美</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Diona-detail" class="char-detail">
+      <div id="Diona" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ディオナ / Diona</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>1月18日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>子猫座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>キャッツテールスペシャル</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>氷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>キャッツテール</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>井澤詩織</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.1</p>
+      </section>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+<footer>
+  <p><small>Copyright 2025 genshin unofficial web site</small></p>
+  
+  <a class="pagetop" href="1_knights.html"><div class="page__top"></div></a>
+</footer>
+
+<script src="./js/chara-view.js"></script>
+</body>
+</html>

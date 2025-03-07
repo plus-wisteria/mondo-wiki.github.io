@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<title>西風教会</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!--ファビコンの設定-->
+<link rel="shortcut icon" href="./images/favicon.ico">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href2="./images/android-chrome-256x256.png">
+</head>
+
+<body class="church">
+
+  <!-- ローディング画面 -->
+<div class="loader">
+  <img src="images/loading2.gif" alt="ローディング">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./js/load2.js"></script>
+
+
+<header>
+  <a href="index.html">
+    <img class="title-logo" src="images/genshin_logo.webp" alt="原神logo">
+  </a>
+  
+  <div class="nav">
+    
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+
+    <!-- メニュー -->
+    <nav class="nav_content">
+      <h4>トップページ</h4>
+      <ul class="nav_list1">
+        <li class="nav_item"><a href="index.html">モンド</a></li>
+      </ul>
+      <h4>&thinsp;組織一覧</h4>
+      <ul class="nav_list2">
+        <li class="nav_item"><a href="1_knights.html">西風騎士団</a></li>
+        <li class="nav_item"><a href="2_church.html">西風教会</a></li>
+        <li class="nav_item"><a href="3_castle.html">モンド城</a></li>
+        <li class="nav_item"><a href="4_outside.html">城外</a></li>
+        <li class="nav_item"><a href="5_adventurer.html">冒険者協会</a></li>
+      </ul>
+    </nav> 
+  </div>
+</header>
+  
+  
+<div class="wrapper">
+<div class="explain">
+  <img class="church-logo" src="images/church_logo.jpg" alt="西風教会">
+  <div class="explain-text">
+    <h1>西風教会</h1>
+    <p>
+      西風教会は、西風騎士団が運営する風神バルバトスの熱心な信者を会員とする組織である。<br>
+      西風大聖堂を管理しており、そこではその信者の多くが働き、祈っている。
+    </p>
+  </div>
+</div>
+
+<div class="status-wrapper">
+  <h4>ステータス</h4>
+  <div class="status-list">
+    <section class="status">
+      <h5>名称</h5>
+      <ruby>
+        <p>西風教会</p>
+        <rt class="sepu">セピュロス&emsp;&emsp;&nbsp;</rt>
+      </ruby>
+    </section>
+    <section class="status">
+      <h5>本拠地</h5>
+      <p>西風大聖堂</p>
+    </section>
+    <section class="status">
+      <h5>国</h5>
+      <p>モンド</p>
+    </section>
+    <section class="status">
+      <h5>代表者</h5>
+      <p>サイモン・ペッチ</p>
+    </section>
+  </div>
+</div>
+
+
+<div class="member-wrapper">
+  <h4>所属キャラ</h4>
+  <div class="member-list">
+    <!-- 左側 キャラリスト -->
+    <div class="char-list">
+      <button class="char-btn" data-target="Barbara" data-detail="Barbara-detail">
+        <img src="images/icon_Barbara.webp" alt="バーバラ">
+        <p>バーバラ</p>
+      </button>
+      <button class="char-btn" data-target="Rosaria" data-detail="Rosaria-detail">
+        <img src="images/icon_Rosaria.webp" alt="ロサリア">
+        <p>ロサリア</p>
+      </button>
+    </div>
+
+    <!-- 右側 キャラ詳細 -->
+    <div class="char-display">
+      <div id="Barbara" class="char-content active" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>バーバラ</h2>
+            <p>モンド城のみんなはバーバラが大好き。<br>
+              ちなみに「アイドル」という言葉は彼女が雑誌で見たものらしい。
+            </p>
+          </div>              
+          <img src="images/avatar_Barbara.webp" alt="バーバラ">
+        </div>
+      </div>
+      <div id="Rosaria" class="char-content" >
+        <div class="char-name">
+          <div class="char-text">
+            <h2>ロサリア</h2>
+            <p>身にまとう服装以外、何ひとつとして聖職者とは思えないシスター。<br>
+              冷たい言動の中には、相手を見透かす鋭さが隠されている。また、いつも一人で行動をしている。
+            </p>
+          </div>              
+          <img src="images/avatar_Rosaria.webp" alt="ロサリア">
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="char-status">
+    <h4>詳細ステータス</h4>
+    <div id="Barbara-detail" class="char-detail">
+      <div id="Barbara" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>バーバラ / Barbara</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>7月5日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>金杯座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>キラキラアイドル</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>水</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風教会</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>鬼頭明里</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.0</p>
+      </section>
+      </div>
+    </div>
+
+    <div id="Rosaria-detail" class="char-detail">
+      <div id="Rosaria" class="char-stlist">
+      <section class="status">
+        <h5>和名 / 英名</h5>
+        <p>ロサリア / Rosaria</p>
+      </section>
+      <section class="status">
+        <h5>誕生日</h5>
+        <p>1月24日</p>
+      </section> 
+      <section class="status">
+        <h5>命ノ星座</h5>
+        <p>荊冠座</p>
+      </section>
+      <section class="status">
+        <h5>称号</h5>
+        <p>荊冠の恩典</p>
+      </section>
+      <section class="status">
+        <h5>神の目</h5>
+        <p>氷</p>
+      </section>
+      <section class="status">
+        <h5>所属</h5>
+        <p>西風教会</p>
+      </section>
+      <section class="status">
+        <h5>日本語 CV</h5>
+        <p>加隈亜衣</p>
+      </section>
+      <section class="status">
+        <h5>実装バージョン</h5>
+        <p>1.4</p>
+      </section>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+<footer>
+  <p><small>Copyright 2025 genshin unofficial web site</small></p>
+  
+  <a class="pagetop" href="1_knights.html"><div class="page__top"></div></a>
+</footer>
+
+<script src="./js/chara-view.js"></script>
+</body>
+</html>

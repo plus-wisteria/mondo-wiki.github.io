@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+/* 全体共通 */
+* {box-sizing: border-box;}
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif, Arial;
+  margin: 0;
+  cursor: url(../images/genshin.cursor.png), auto;
+}
+
+/* transparent = 透明*/
+
+img{vertical-align: bottom;}
+a{text-decoration: none;}
+
+/* ローディング */
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 555;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader img{
+  width: 100%;
+  height: 100%;
+}
+
+/* メインビジュアル */
+.main-visual{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+}
+
+
+/* 背景 */
+/* トップページ */
+.mondo{
+  background-image: url("../images/back_top.png");
+  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+/* 西風騎士団 */
+.knight{
+  background-image: url("../images/back-knight2.png");
+  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+/* 西風教会 */
+.church{
+  background-image: url("../images/back_church2.png");
+  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+/* モンド城 */
+.castle{
+  background-image: url("../images/back_castle2.png");
+  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+/* 城外 */
+.outside{
+  background-image: url("../images/back_outside2.png");
+  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+/* 冒険者協会 */
+.adventurer{
+  background-image: url("../images/back_adventurer2.png");
+  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+/* 共通ヘッダー */
+header{
+  width: 100%;
+  background-color:rgba(14, 13, 19,0.85);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  position: fixed;
+  z-index: 80;
+}
+.title-logo{
+  width: 120px;
+  margin: 10px 30px;
+}
+.title-logo:hover{
+  background: hsla(0, 0%, 100%, .1);
+  border-radius: 5px;}
+
+/* ハンバーガーメニュー*/
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 60px;
+  top: 40px;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 28px;
+  border-radius: 3px;
+  background: white;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer_open{
+  width: 30px;
+  height: 36px;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 10px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 10px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  align-items: center;
+  top: 0%;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background-color:rgba(14, 13, 19, 0.85);
+  transition: .5s;
+  padding-top: 20px;
+  margin-top: 118px;
+}
+.nav_content h4{
+  color: hsla(0, 0%, 100%, .4);
+  margin: 0 0 0 18px;
+  font-size: 16px;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list1 {
+  list-style: none;
+  max-width: 200px;
+  margin: 10px 0 20px 40px;
+  padding: 0;
+}
+.nav_list2 {
+  list-style: none;
+  max-width: 200px;
+  margin: 10px 0 20px 40px;
+  padding: 0;
+}
+.nav_item{
+  margin-bottom: 8px;
+  width: 90px;
+}
+
+.nav_item a {
+  width: 90px;
+  color: rgb(225, 227, 228);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+.nav_item a:hover{
+  background: hsla(0, 0%, 100%, .1);
+  border-radius: 5px;}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 1300px;
+}
+
+
+/* 共通メインコンテンツwrapper */
+.wrapper{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color:rgba(14, 13, 19,0.95); */
+}
+
+/* 共通説明 */
+.explain{
+  background-color:rgba(14, 13, 19,0.85);
+  display: flex;
+  align-items: center;
+  margin: 140px 10px 20px 10px;
+  padding: 30px;
+  border-radius: 6px;
+}
+.explain-text{
+  color: rgb(225, 227, 228);
+  margin-right: 20px;
+}
+.explain-text h1{
+  font-size: 38px;
+  margin: 0;
+  border-bottom: hsla(0, 0%, 100%, .4) solid 1px;
+}
+.explain-text p{
+  font-size: 16px;
+  margin: 10px 20px 10px 0;
+}
+
+/* 説明ロゴ */
+.mondo-logo{
+  width: 180px;
+  height: 180px;
+  margin-right: 20px;
+}
+
+.knight-logo{
+  width: 160px;
+  height: 180px;
+  margin-right: 30px;
+}
+.church-logo{
+  width: 180px;
+  height: 180px;
+  margin-right: 20px;
+}
+.castle-logo{
+  width: 180px;
+  height: 160px;
+  margin-right: 20px;
+}
+.outside-logo{
+  width: 180px;
+  height: 160px;
+  margin-right: 20px;
+}
+.adventurer-logo{
+  width: 180px;
+  height: 180px;
+  margin-right: 20px;
+}
+
+/* 共通ステータス */
+.status-wrapper{
+  margin: 20px 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color:rgba(14, 13, 19,0.85);
+  border-radius: 6px;
+}
+.status-wrapper h4{
+  color: rgb(225, 227, 228);
+  font-size: 18px;
+  margin: 10px 20px;
+  border-bottom: hsla(0, 0%, 100%, .4) solid 1px;
+}
+.status-list{
+  width: 840px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.status{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc((100% - 80px) / 2); 
+  margin: 10px;
+  overflow: hidden;
+}
+.status h5{
+  color: hsla(0, 0%, 100%, .4);
+  font-size: 14px;
+  width: 150px;
+  margin: 0;
+}
+.status p{
+  color: rgb(225, 227, 228);
+  font-size: 16px;
+  margin: 0 0 0 10px;
+}
+/* ルビ */
+.sepu{
+  color: rgb(225, 227, 228);
+}
+
+
+/* トップページ */
+/* 組織一覧 */
+.affall-wrapper{
+  background-color:rgba(14, 13, 19,0.85);
+  margin: 20px 10px;
+  padding: 30px;
+  align-items: center;
+  border-radius: 6px;
+}
+.affall-wrapper h4{
+  color: rgb(225, 227, 228);
+  font-size: 18px;
+  margin: 10px 20px;
+  border-bottom: hsla(0, 0%, 100%, .4) solid 1px;
+}
+.aff-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 60px;
+}
+
+.box{
+  min-width: 330px;
+  width: 350px;
+  height: 80px;
+  display: flex;
+  position:relative;
+  z-index: 1;
+  text-decoration:none;
+  overflow:hidden;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(37, 43, 55);
+  margin: 20px;
+  width: calc((100% - 140px) / 2); 
+  border-radius: 5px;
+  /* border: solid 1px transparent; */
+}
+.box::after{
+  content: "";
+  position: absolute;
+  z-index: 10;
+  background-image: url("../images/boxline_after.png");
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 80%;
+  background-size: contain;
+  background-position: center;
+  transform: translate(-50%, -50%); 
+  background-size: 100% 100%;
+}
+.box:hover{
+  transform:scale(1.04);
+  transition: all .05s linear;
+  border: solid 1px rgb(58, 64, 75);
+}
+
+.box h3{
+  position: absolute;
+  z-index: 15;
+  color: rgb(225, 227, 228);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 20px 20px 40px;
+}
+
+.aff-back{  
+  position: absolute;
+  z-index: 5;
+  width: 330px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-color: rgb(37, 43, 55);
+  border-radius: 5px;
+}
+
+/* 西風騎士団 */
+/* 概要 */
+.summary{
+  background-color:rgba(14, 13, 19,0.85);
+  margin: 20px 10px;
+  padding: 30px;
+  align-items: center;
+  border-radius: 6px;
+}
+.summary h4{
+  color: rgb(225, 227, 228);
+  font-size: 18px;
+  margin: 10px 20px;
+  border-bottom: hsla(0, 0%, 100%, .4) solid 1px;
+}
+.summary p{
+  color: rgb(225, 227, 228);
+  font-size: 16px;
+  margin: 20px;
+}
+.summary small{
+  color: hsla(0, 0%, 100%, .4);
+}
+
+/* 所属キャラ */
+
+.member-wrapper{
+  background-color:rgba(14, 13, 19,0.85);
+  margin: 20px 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+}
+.member-wrapper h4{
+  color: rgb(225, 227, 228);
+  width: 840px;
+  font-size: 18px;
+  margin: 10px 20px;
+  border-bottom: hsla(0, 0%, 100%, .4) solid 1px;
+}
+
+.member-list {
+  display: flex;
+  min-width: 840px;
+  max-width: 840px;
+  overflow: hidden;
+}
+
+/* 左側 */
+.char-list {
+  min-width: 260px;
+  max-width: 260px;
+  max-height: 420px;
+  margin: 20px 20px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.char-btn {
+  max-width: 75px;
+  max-height: 95px;
+  overflow:hidden;
+  background-color: rgb(39, 43, 50);
+  border-radius: 8px;
+  border: solid 2px rgb(58, 64, 75);
+  color: rgb(225, 227, 228);
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.char-btn img {
+  background-color: rgb(57, 65, 81);
+  width: 75px;
+  border-radius: 8px 8px 0 0;
+}
+.char-btn p{
+  margin: 0;
+}
+
+.char-btn:hover {
+  border: solid 2px rgb(211, 188, 142);
+}
+
+/* 右側 */
+.char-display {
+  background-color: rgba(14, 13, 19);
+  display: flex;
+  position: relative;
+  color: rgb(225, 227, 228);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.char-content {
+  display: none;
+  position: relative;
+  min-width: 560px;
+  height:460px;
+}
+
+.char-content h2{
+  font-size: 30px;
+  margin: 0 10px;
+}
+.char-content p{
+  font-size: 16px;
+  margin: 10px;
+  width: 280px;
+}
+.char-content u {
+  text-decoration-color: rgb(225, 227, 228,0.8);
+}
+.char-text {
+  /* background-color:rgba(14, 13, 19,0.4); */
+  background-image: linear-gradient(to right,rgb(14, 13, 19, 0.3) 0%, rgba(14, 13, 19, 0.06) 100%);
+  z-index: 12;
+  border-radius: 6px;
+  position: absolute;
+  padding: 10px;
+  min-width: 560px;
+  height:460px;
+}
+.char-content img {
+  position: absolute;
+  z-index: 10;
+  width: 500px;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  justify-content: right;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+
+.char-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.char-content,
+.char-detail {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+
+/* キャラステータス */
+.char-status{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+.char-stlist{
+  background-color: rgba(14, 13, 19);
+  width: 840px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 元素色背景 */
+/* 風 */
+#Jean, #Sucrose, #Traveler, #Venti {
+  background-image: radial-gradient(circle, rgba(12, 78, 79, 0.8) 20%, rgba(12, 78, 79, 0.4) 60%, rgba(12, 78, 79, 0.1) 100%);
+}
+/* 氷 */
+#Kaeya, #Eula, #Mika, #Rosaria, #Diona{
+  background-image: radial-gradient(circle, rgba(19, 81, 119, 0.8) 20%, rgba(19, 81, 119, 0.4) 60%, rgba(19, 81, 119, 0.1) 100%);
+}
+/* 水 */
+#Barbara ,#Mona{
+  background-image: radial-gradient(circle, rgba(28, 71, 150, 0.8) 20%, rgba(28, 71, 150, 0.4) 60%, rgba(28, 71, 150, 0.1) 100%);
+}
+/* 雷 */
+#Lisa, #Razor, #Fischl{
+  background-image: radial-gradient(circle, rgba(66, 40, 140, 0.8) 20%, rgba(66, 40, 140, 0.4) 60%, rgba(66, 40, 140, 0.1) 100%);
+}
+/* 炎 */
+#Amber, #Klee, #Diluc, #Bennett{
+  background-image: radial-gradient(circle, rgba(95, 34, 27, 0.8) 20%, rgba(95, 34, 27, 0.4) 60%, rgba(95, 34, 27, 0.1) 100%);
+}
+/* 岩 */
+#Albedo, #Noelle{
+  background-image: radial-gradient(circle, rgba(108, 85, 38, 0.8) 20%, rgba(108, 85, 38, 0.4) 60%, rgba(108, 85, 38, 0.1) 100%);
+}
+
+
+
+/* 共通フッター */
+footer {
+  text-align: center;
+  width: 100%;
+  background-color:rgba(14, 13, 19,0.85);
+  padding: 30px;
+  margin-top: 30px;}
+
+footer p{
+  color: hsla(0, 0%, 100%, .4);
+  font-size: 16px;
+  margin-top: 40px;}
+  
+/* pagetopボタン */
+html {scroll-behavior: smooth;}
+
+.pagetop {
+  z-index: 100;
+  height: 45px;
+  width: 45px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 6px;
+  background-color: rgb(63, 166, 145);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;}
+
+.page__top {
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: translateY(20%) rotate(-45deg);}

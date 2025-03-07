@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+
+<title>モンド組織wiki</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!--ファビコンの設定-->
+<link rel="shortcut icon" href="./images/favicon.ico">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href2="./images/android-chrome-256x256.png">
+</head>
+
+<!--モンド-->
+<body class="mondo">
+
+<!-- ローディング画面 -->
+<div class="loader">
+  <img src="images/loading.gif" alt="ローディング">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./js/load.js"></script>
+  
+
+<header>
+  <a href="index.html">
+    <img class="title-logo" src="images/genshin_logo.webp" alt="原神logo">
+  </a>
+
+  <!-- ハンバーガーメニュー部分 -->
+  <div class="nav">
+    
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+
+    <!-- メニュー -->
+    <nav class="nav_content">
+      <h4>トップページ</h4>
+      <ul class="nav_list1">
+        <li class="nav_item"><a href="index.html">モンド</a></li>
+      </ul>
+      <h4>&thinsp;組織一覧</h4>
+      <ul class="nav_list2">
+        <li class="nav_item"><a href="1_knights.html">西風騎士団</a></li>
+        <li class="nav_item"><a href="2_church.html">西風教会</a></li>
+        <li class="nav_item"><a href="3_castle.html">モンド城</a></li>
+        <li class="nav_item"><a href="4_outside.html">城外</a></li>
+        <li class="nav_item"><a href="5_adventurer.html">冒険者協会</a></li>
+      </ul>
+    </nav> 
+  </div>
+</header>
+
+<!-- https://wiki.hoyolab.com/pc/genshin/aggregate/23?filter_ids= -->
+
+<!-- <div class="main-visual">
+  <img src="images/back1.png" alt="メインビジュアル">
+</div> -->
+
+
+<div class="wrapper">
+<div class="explain">
+  <img class="mondo-logo" src="images/mondo_logo2.webp" alt="モンドlogo">
+  <div class="explain-text">
+    <h1>モンド</h1>
+    <p>
+      テイワット大陸の北東部に位置する自由の城。<br>
+      山々と平原の合間から蒲公英の息吹を引き連れた自由の風が吹き、シードル湖を撫でる。<br>
+      そして、風神バルバトスの祝福と恵みが、湖の中心——モンドへと届けられる。
+    </p>
+  </div>
+</div>
+
+<div class="status-wrapper">
+  <h4>ステータス</h4>
+  <div class="status-list">
+    <section class="status">
+      <h5>和名 / 英名</h5>
+      <p>モンド / Mondstadt</p>
+    </section>
+    <section class="status">
+      <h5>種類</h5>
+      <p>国</p>
+    </section>
+    <section class="status">
+      <h5>俗世の七執政</h5>
+      <p>バルバトス</p>
+    </section>
+    <section class="status">
+      <h5>中心地域</h5>
+      <p>モンド城</p>
+    </section>
+  </div>
+</div>
+
+
+<div class="affall-wrapper">
+  <h4>組織一覧</h4>
+  <div class="aff-wrapper">
+  <!-- 1 -->
+    <a class="box" href="1_knights.html">
+      <h3>西風騎士団</h3>
+      <div class="aff-back" style="background-image: linear-gradient(to right,rgb(37, 43, 55) 0%, rgba(37, 43, 55, 0.2) 100%), url('images/back_knight.png');">
+      </div>
+    </a>
+  <!-- 2 -->
+    <a class="box" href="2_church.html">
+      <h3>西風教会</h3>
+      <!-- <img src="images/back-church2.png" alt="西風教会"> -->
+      <div class="aff-back" style="background-image: linear-gradient(to right,rgb(37, 43, 55) 0%, rgba(37, 43, 55, 0.2) 100%), url('images/back_church1.png');">
+      </div>
+    </a>
+  <!-- 3 -->
+    <a class="box" href="1-knights.html">
+      <h3>モンド城</h3>
+      <div class="aff-back" style="background-image: linear-gradient(to right,rgb(37, 43, 55) 0%, rgba(37, 43, 55, 0.2) 100%), url('images/back_castle1.png');">
+      </div>
+    </a>
+  <!-- 4 -->
+    <a class="box" href="1-knights.html">
+      <h3>城外</h3>
+      <div class="aff-back" style="background-image: linear-gradient(to right,rgb(37, 43, 55) 0%, rgba(37, 43, 55, 0.2) 100%), url('images/back_outside1.png');">
+      </div>
+    </a>
+  <!-- 5 -->
+    <a class="box" href="1-knights.html">
+      <h3>冒険者協会</h3>
+      <div class="aff-back" style="background-image: linear-gradient(to right,rgb(37, 43, 55) 0%, rgba(37, 43, 55, 0.2) 100%), url('images/back_adventurer1.png');">
+      </div>
+    </a>
+  </div>
+</div>
+
+
+</div>
+
+<footer>
+  <p><small>Copyright 2025 genshin unofficial web site</small></p>
+  
+  <a class="pagetop" href="#"><div class="page__top"></div></a>
+</footer>
+
+
+</body>
+</html>
